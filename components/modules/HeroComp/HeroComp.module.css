@@ -1,0 +1,12 @@
+.Hero {
+	@apply w-[100%] h-[70vh] relative flex justify-center items-center pt-28 gap-20 flex-col flex-nowrap;
+}
+.HeroText {
+	@apply w-[60%] gap-3 flex justify-center items-center flex-col flex-nowrap text-center;
+}
+.HeroCompanies {
+	@apply w-[50%] gap-6 flex justify-center items-center flex-col flex-nowrap;
+}
+.Icons {
+	@apply w-[100%] gap-3 flex justify-around items-center flex-row flex-nowrap;
+}

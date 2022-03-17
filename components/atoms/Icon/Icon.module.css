@@ -1,0 +1,18 @@
+.icon {
+	@apply flex justify-center items-center;
+}
+.xl {
+	@apply w-[70px] h-[70px];
+}
+.lg {
+	@apply w-[50px] h-[50px];
+}
+.md {
+	@apply w-[30px] h-[30px];
+}
+.sm {
+	@apply w-[20px] h-[20px];
+}
+.xs {
+	@apply w-[10px] h-[10px];
+}

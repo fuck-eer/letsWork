@@ -1,0 +1,30 @@
+.button {
+	@apply flex items-center justify-center capitalize transition-all active:scale-90 disabled:cursor-not-allowed disabled:pointer-events-none;
+}
+.solid {
+	@apply bg-red text-white hover:bg-[#e44040];
+}
+.naked {
+	@apply rounded-lg bg-transparent text-black hover:bg-[#eee];
+}
+.outlined {
+	@apply text-black bg-transparent border-2 border-black rounded-md hover:bg-black hover:text-white hover:border-transparent;
+}
+.link {
+	@apply transition-all hover:underline hover:underline-offset-4;
+}
+.xl {
+	@apply px-10 py-3 text-2xl;
+}
+.lg {
+	@apply px-3 py-2 text-xl;
+}
+.md {
+	@apply px-2 py-1 text-lg;
+}
+.sm {
+	@apply px-2 py-1 text-base font-light;
+}
+.xs {
+	@apply px-2 py-1 text-sm;
+}

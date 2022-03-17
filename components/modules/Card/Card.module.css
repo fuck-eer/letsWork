@@ -1,0 +1,15 @@
+.card {
+	@apply m-auto relative min-h-[110px] w-[100%] border-2 border-[#eee] grid gap-2 grid-cols-[0.4fr_3fr_1.6fr] hover:bg-[#eeeeee40] cursor-pointer;
+}
+.logo {
+	@apply absolute flex justify-center items-center top-[50%] left-0 translate-x-[-50%] translate-y-[-50%] w-[70px] h-[70px] rounded-full bg-white border-2 border-dark-gray;
+}
+.details {
+	@apply flex flex-col items-start justify-center col-start-2 col-end-3 flex-nowrap;
+}
+.date {
+	@apply flex flex-col items-center justify-center col-start-3 col-end-4 flex-nowrap;
+}
+.featured {
+	@apply bg-[#FFF7CC] hover:bg-[#fdd70048] border-transparent before:content-[''] before:absolute before:top-[6px] before:right-[10px] before:left-[97.6%] before:bottom-[6px] before:rounded-full before:bg-[#FCC400];
+}

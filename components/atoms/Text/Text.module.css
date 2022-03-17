@@ -1,0 +1,29 @@
+.cuhead {
+	@apply font-medium;
+}
+.cupara {
+	@apply font-light;
+}
+.xl {
+	@apply text-4xl font-semibold;
+}
+.lg {
+	@apply text-2xl font-medium;
+}
+.md {
+	@apply text-xl font-medium;
+}
+.sm {
+	@apply text-lg font-light;
+}
+.xs {
+	@apply text-base font-light;
+}
+.main {
+	@apply py-1;
+}
+
+.onHover {
+	@apply relative before:absolute before:content-[''] before:top-[-5px] before:left-[-10px] before:bottom-[-5px] before:right-[120%] before:bg-[#00000010] before:rounded-lg
+	hover:before:top-[-5px] hover:before:left-[-10px] hover:before:bottom-[-5px] hover:before:right-[-10px] before:transition-all;
+}

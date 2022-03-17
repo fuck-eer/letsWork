@@ -1,0 +1,9 @@
+.cardList {
+	@apply w-[100%] flex justify-start gap-12 flex-col items-center flex-nowrap p-2;
+}
+.listHead {
+	@apply w-[50%];
+}
+.listHolder {
+	@apply w-[50%] flex flex-col justify-start items-center flex-nowrap gap-8;
+}
