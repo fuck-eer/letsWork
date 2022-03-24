@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React from "react";
 import { Job } from "../../../lib/types";
 import Icon from "../../atoms/Icon/Icon";
@@ -8,36 +9,46 @@ import classes from "./Card.module.css";
 export type CardProps = Job;
 const Card = ({
 	id,
+	slug,
 	commitment,
 	isFeatured,
 	locationNames,
-	companyUrl,
 	postedAt,
 	title,
-	companyName,
+	company,
 }: CardProps): JSX.Element => {
-	const month = postedAt.toLocaleDateString("en-US", { month: "short" });
-	const day = postedAt.toLocaleDateString("en-US", { day: "2-digit" });
+	const router = useRouter();
+	const month = new Date(postedAt).toLocaleDateString("en-US", {
+		month: "short",
+	});
+	const day = new Date(postedAt).toLocaleDateString("en-US", {
+		day: "2-digit",
+	});
 	return (
-		<div className={`${classes.card} ${isFeatured ? classes.featured : ""}`}>
+		<div
+			onClick={() => {
+				router.push(`/${company.slug}/${slug}`);
+			}}
+			className={`${classes.card} ${isFeatured ? classes.featured : ""}`}
+		>
 			<div className={classes.logo}>
 				<img
-					src={`https://logo.clearbit.com/${companyUrl}`}
-					alt='logo'
+					src={`https://logo.clearbit.com/${company.websiteUrl}`}
+					alt='🧷'
 					width='30px'
 					height='30px'
 				/>
 			</div>
 			<div className={classes.details}>
 				<Text size='xs' varient='h' inline>
-					<span className='font-medium text-[14px]'>{companyName}</span>
+					<span className='font-medium text-[14px]'>{company.name}</span>
 				</Text>
 				<Text size='md' varient='h' inline>
 					<span className='font-medium'>{title}</span>
 				</Text>
 				<Text size='xs' varient='h' inline>
 					<span className='font-extralight'>
-						{commitment}/{locationNames}
+						{commitment.title}/{locationNames || "Remote"}
 					</span>
 				</Text>
 			</div>

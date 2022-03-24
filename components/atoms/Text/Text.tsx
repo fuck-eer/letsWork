@@ -4,7 +4,7 @@ import { theme } from "../../../tailwind.config";
 const allSizes = ["xl", "lg", "md", "sm", "xs"] as const;
 export type size = typeof allSizes[number];
 
-const allVarients = ["h", "p"] as const;
+const allVarients = ["h", "p", "li"] as const;
 export type varient = typeof allVarients[number];
 
 export type TextProps = {
@@ -37,6 +37,9 @@ const Text = ({
 
 	if (varient === "p") {
 		return <p className={textClass}>{children}</p>;
+	}
+	if (varient === "li") {
+		return <li className={textClass}>{children}</li>;
 	}
 	switch (size) {
 		case "xl":

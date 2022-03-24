@@ -7,6 +7,11 @@ import GoogleIcon from "./GoogleIcon";
 import InvisionIcon from "./InvisionIcon";
 import SearchIcon from "./searchIcon";
 import classes from "./Icon.module.css";
+import Eleminate from "./Eleminate";
+import World from "./World";
+import Location from "./Location";
+import Calander from "./Calander";
+import Cross from "./Cross";
 const icons = [
 	"google",
 	"facebook",
@@ -14,6 +19,11 @@ const icons = [
 	"github",
 	"amazon",
 	"search",
+	"world",
+	"location",
+	"eleminate",
+	"calender",
+	"cross",
 ] as const;
 export type icon = typeof icons[number];
 export type IconProps = {
@@ -58,6 +68,36 @@ const Icon = ({ size, icon, color }: IconProps): JSX.Element => {
 			return (
 				<div className={`${classes.icon} ${classes[size]}`}>
 					<SearchIcon color={color} />
+				</div>
+			);
+		case "calender":
+			return (
+				<div className={`${classes.icon} ${classes[size]}`}>
+					<Calander color={color} />
+				</div>
+			);
+		case "location":
+			return (
+				<div className={`${classes.icon} ${classes[size]}`}>
+					<Location color={color} />
+				</div>
+			);
+		case "world":
+			return (
+				<div className={`${classes.icon} ${classes[size]}`}>
+					<World color={color} />
+				</div>
+			);
+		case "eleminate":
+			return (
+				<div className={`${classes.icon} ${classes[size]}`}>
+					<Eleminate color={color} />
+				</div>
+			);
+		case "cross":
+			return (
+				<div className={`${classes.icon} ${classes[size]}`}>
+					<Cross color={color} />
 				</div>
 			);
 		default:

@@ -1,0 +1,6 @@
+.ctaPanel {
+	@apply px-1 py-3 mt-8 w-[25%] flex flex-col justify-start items-center gap-4 flex-nowrap;
+}
+.ctaHeading {
+	@apply px-1 w-[80%] flex flex-row justify-start items-center gap-4 flex-nowrap;
+}

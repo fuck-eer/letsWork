@@ -6,7 +6,7 @@ export type ContentProps = {
 };
 const Content = ({ content }: ContentProps) => {
 	return (
-		<div className='text-base font-light list-disc w-[50%]'>
+		<div className='text-base font-light list-disc w-[60%]'>
 			<Markdown
 				options={{
 					overrides: {

@@ -11,22 +11,34 @@ const Template: Story<CardProps> = (args) => <Card {...args} />;
 export const DemoCard = Template.bind({});
 DemoCard.args = {
 	id: "1",
-	companyName: "Amazon.inc",
-	companyUrl: "www.amazon.com",
+	company: {
+		id: "1",
+		name: "Amazon.Inc",
+		websiteUrl: "www.amazon.com",
+	},
 	title: "Senior-Frontend Developer",
 	postedAt: new Date(),
 	isFeatured: false,
 	locationNames: "USA",
-	commitment: "Full-Time",
+	commitment: {
+		id: "1",
+		title: "Full-Time",
+	},
 };
 export const featuredCard = Template.bind({});
 featuredCard.args = {
 	id: "1",
-	companyName: "Amazon.inc",
-	companyUrl: "www.amazon.com",
+	company: {
+		id: "1",
+		name: "Amazon.Inc",
+		websiteUrl: "www.amazon.com",
+	},
 	title: "Senior-Frontend Developer",
 	postedAt: new Date(),
 	isFeatured: true,
 	locationNames: "USA",
-	commitment: "Full-Time",
+	commitment: {
+		id: "1",
+		title: "Full-Time",
+	},
 };

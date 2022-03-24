@@ -1,0 +1,3 @@
+.pagelayout {
+	@apply w-[100vw] flex flex-col justify-start items-stretch flex-nowrap gap-8;
+}

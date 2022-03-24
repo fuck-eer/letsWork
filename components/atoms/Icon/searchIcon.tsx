@@ -24,7 +24,6 @@ const SearchIcon = ({ color }: svgPorp): JSX.Element => {
 				strokeLinecap='round'
 				strokeLinejoin='round'
 			/>
-			<rect x='0.5' width='40' height='40' stroke='#ffffff00' />
 		</svg>
 	);
 };

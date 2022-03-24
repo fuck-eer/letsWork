@@ -1,20 +1,36 @@
 export type Job = {
 	id: string;
-	companyName: string;
-	companyUrl: string;
+	company: Company;
 	title: string;
 	postedAt: Date;
 	isFeatured: boolean;
 	locationNames: string;
-	commitment: string;
+	commitment: Commitment;
+	slug: string;
+};
+export type Company = {
+	name: string;
+	id: string;
+	websiteUrl: string;
+	slug: string;
+	jobs?: Jobs;
+	twitter?: string;
+};
+export type Commitment = {
+	id: string;
+	title: string;
 };
 export type tag = {
 	id: string;
 	name: string;
 };
+export type City = {
+	id: string;
+	name: string;
+};
 export type tags = tag[];
 export type JobDescription = {
-	discription: string;
+	description: string;
 	applyUrl: string;
 	tags: tags;
 };

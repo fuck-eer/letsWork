@@ -8,7 +8,7 @@ export type CardListProps = {
 };
 const CardList = ({ jobs }: CardListProps) => {
 	return (
-		<div className={classes.cardList}>
+		<div id='jobsList' className={classes.cardList}>
 			<div className={classes.listHead}>
 				<Text size='xs' varient='h'>
 					<span className='text-xl font-medium'>Jobs</span> you might like:
